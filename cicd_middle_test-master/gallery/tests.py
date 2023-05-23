@@ -14,7 +14,7 @@ class ImageTestCase(TestCase):
         self.image.categories.add(self.category)
 
     def test_image_has_title(self):
-        self.assertEqual(self.image.title, 'Test Image')
+        self.assertEqual(self.image.title, 'Test Image functionality')
 
     def test_image_has_image_path(self):
         self.assertEqual(self.image.image, 'path/to/test/image.jpg')
@@ -29,4 +29,4 @@ class ImageTestCase(TestCase):
         self.assertIn(self.category, self.image.categories.all())
 
     def test_category_has_name(self):
-        self.assertEqual(self.category.name, 'Test Category')
+        self.assertEqual(self.category.name, 'Test Category functionality')
