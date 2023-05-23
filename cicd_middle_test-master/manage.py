@@ -17,6 +17,19 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+    def test_image_title(self):
+        self.assertEqual(self.image.title, 'Beautiful Landscape')
+
+    def test_image_categories(self):
+        self.assertEqual(self.image.categories.count(), 1)
+        self.assertEqual(self.image.categories.first(), self.category)
+
+    def test_image_created_date(self):
+        self.assertEqual(self.image.created_date, date.today())
+
+    def test_image_age_limit(self):
+        self.assertEqual(self.image.age_limit, 18)
+
 
 if __name__ == '__main__':
     main()
